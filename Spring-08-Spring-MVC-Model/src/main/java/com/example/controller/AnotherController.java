@@ -1,7 +1,7 @@
 package com.example.controller;
 
-import com.example.model.Mentor;
 import com.example.enums.Gender;
+import com.example.model.Mentor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("mentor")
-public class MentorController {
+@RequestMapping("another")
+public class AnotherController {
 
     @RequestMapping("/list")
     public String mentor(Model model) {
@@ -25,4 +25,5 @@ public class MentorController {
 
         return "mentor/mentor-list";
     }
+
 }
