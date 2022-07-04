@@ -1,0 +1,66 @@
+Thymeleaf Review:
+
+Template Engine: It used to display data in the view that controller sends.
+
+Thymeleaf : provides a good support serving a HTML5 in web application.
+
+            To integrate Thymeleaf with spring boot, we need to add : spring-boot-starter-thyleaf
+
+            To convert HTML file to thymeleaf we need to add the attribute
+            xmlns:th="http://www.thymeleaf.org"
+
+Displaying values :
+            th:text is used to display the value of model attributes
+            ${attribute_key} expression is used to refer to any of the attributes we send from controller
+
+@Controller
+@RequestMapping("/car")
+public class CarController() {
+
+        @RequestMapping("/info")
+        public String carInfo(Model model){
+
+        List<String> cars = Arrays.asList("Honda", "Toyota", "Tesla");
+        model.addAttribute("cars", cars);
+
+        return "car/car-info";
+        }
+}
+
+car-info.html :
+
+    <h2 th:text = "${cars.get(0)}" ></h2>
+
+Links: @{...} expression is used to create URLs
+
+       Absolute URLs : <a th:href="@{https://cydeo.com}">Cydeo</a>
+
+       Relative URLs : <a th:href="@{/car/buy}">Buy</a>
+
+       Adding Parameters to Link : <a th:href = "@{/car/buy(year=2019)}"  => .../car/buy?year=2019
+
+Iteration: th:each is used to achieve iteration
+
+    <ul>
+           <li th:each = "car : ${cars}" th:text = "${car}">Car</li>
+    </ul>
+
+Adding CSS,JS, Images : The default directory is src/main/resources/static
+    <link th:href = "@{/css/main.css}" rel = "stylesheet" />
+
+    <script type="text/javascript" th:src="@{/js/main.js}"></script>
+
+    <img th:src="@{/images/java.png}"/>
+
+Fragments : reusable common parts in our pages
+    th:replace : replaces the current tag with the tag defining the fragment
+
+    index.html
+
+    <div th:fragment = "main-menu">
+        <a href = https://cydeo.com/">Cydeo</a>
+    </div>
+
+    welcome.html
+
+    <div th:replace="fragments/index :: main-menu"></div>
