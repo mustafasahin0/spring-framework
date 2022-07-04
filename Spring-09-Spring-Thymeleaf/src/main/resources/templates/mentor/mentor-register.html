@@ -7,7 +7,7 @@
 </head>
 <div align="center">
 <body>
- <form th:object="${mentor}">
+ <form th:action="@{/mentor/confirm}" method="post" th:object="${mentor}">
 
      <label for="FirstName">First Name:</label>
      <input type="text" id="FirstName" th:field="*{firstName}"><br>
