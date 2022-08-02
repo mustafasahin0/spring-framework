@@ -9,6 +9,4 @@ public class Employee {
     @Id
     private int id;
     private String name;
-
-
 }
