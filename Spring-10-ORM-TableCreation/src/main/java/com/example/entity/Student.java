@@ -1,7 +1,6 @@
 package com.example.entity;
 
 import com.example.enums.Gender;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -25,8 +24,10 @@ public class Student {
 
     @Column(columnDefinition = "DATE")
     private LocalDate birthDate;
+
     @Column(columnDefinition = "TIME")
     private LocalTime birthTime;
+
     @Column(columnDefinition = "TIMESTAMP")
     private LocalDate birthDateTime;
 
