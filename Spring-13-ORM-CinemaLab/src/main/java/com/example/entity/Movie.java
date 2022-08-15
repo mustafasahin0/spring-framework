@@ -8,11 +8,12 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
 @Data
-public class Movie extends BaseEntity{
+public class Movie extends BaseEntity {
 
     private String name;
     @Column(columnDefinition = "DATE")
@@ -25,4 +26,9 @@ public class Movie extends BaseEntity{
     @Enumerated(EnumType.STRING)
     private MovieState state;
     private BigDecimal price;
+
+    @ManyToMany
+    @JoinTable(name = "movie_genre_rel", joinColumns = @JoinColumn(name = "mpvie_id"),
+    inverseJoinColumns = @JoinColumn(name = "genre_id"))
+    private List<Genre> genreList;
 }
