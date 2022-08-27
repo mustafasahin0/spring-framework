@@ -1,5 +1,6 @@
 package com.example.repository;
 
+import com.example.entity.Department;
 import com.example.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -51,4 +52,45 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
     @Query("SELECT e FROM Employee e WHERE e.email=?1 AND e.salary=?2")
     Employee getEmployeeDetail(String email, int salary);
+
+    //Not Equal
+    @Query("SELECT e.salary FROM Employee e WHERE e.salary <> ?1")
+    List<Employee> getEmployeeSalaryNotEqual(int salary);
+
+    //Like/Contains/Startswith/EndsWith
+    @Query("SELECT e FROM Employee e WHERE e.firstName LIKE ?1")
+    List<Employee> getEmployeeFirstNameLike(String pattern);
+
+    //less than
+    @Query("SELECT e FROM Employee e WHERE e.salary < ?1")
+    List<Employee> getEmployeeSalaryLessThan(int salary);
+
+    //greater than
+    @Query("SELECT e FROM Employee e WHERE e.salary > ?1")
+    List<Employee> getEmployeeSalaryGreaterThan(int salary);
+
+    //After
+    @Query("SELECT e FROM Employee e WHERE e.hireDate > ?1")
+    List<Employee> getEmployeeHireDateAfter(LocalDate date);
+
+    //Between
+    @Query("SELECT e FROM Employee e WHERE e.salary BETWEEN ?1 AND ?2")
+    List<Employee> getEmployeeSalaryBetween(int salary, int salary2);
+
+    //Null
+    @Query("SELECT e FROM Employee e WHERE e.email IS NULL")
+    List<Employee> getEmployeeEmailIsNull();
+
+    //Not Null
+    @Query("SELECT e FROM Employee e WHERE e.email IS NOT NULL")
+    List<Employee> getEmployeeEmailIsNotNull();
+
+    //Sorting is ascending order
+    @Query("SELECT e FROM Employee e ORDER BY e.salary")
+    List<Employee> getEmployeeSalaryOrderAsc();
+
+    //Sorting is descending order
+    @Query("SELECT e FROM Employee e ORDER BY e.salary DESC")
+    List<Employee> getEmployeeSalaryOrderDesc();
+
 }
