@@ -29,6 +29,7 @@ public interface CourseRepository extends JpaRepository<Course, Long> {
     //find All Courses By Category And Returns A Stream
     Stream<Course> streamByCategory(String category);
 
-    @Query("SELECT c FROM Course c WHERE c.category = :category AND c.rating >= :rating")
+    @Query("SELECT c FROM Course c WHERE c.category = :category AND c.rating > :rating")
     List<Course> findAllByCategoryAndRatingGreaterThan(@Param("category") String category, @Param("rating") int rating);
+
 }
