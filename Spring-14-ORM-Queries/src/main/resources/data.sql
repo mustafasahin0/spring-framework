@@ -1043,3 +1043,17 @@ VALUES (1, 'Berrie', 'Manueau', 'bmanueau0@dion.ne.jp', '2006-04-20', 'Sports', 
        (999, 'Kingston', 'Piwall', 'kpiwallrq@nyu.edu', '2012-07-07', 'Music', 'M', 45679, 7),
        (1000, 'Jacquelin', 'Cassam', 'jcassamrr@cam.ac.uk', '2010-01-27', 'Music', 'F', 28726, 2)
     ON CONFLICT DO NOTHING;
+
+
+INSERT INTO COURSES(NAME, CATEGORY, RATING, DESCRIPTION)
+VALUES('Rapid Spring Boot Application Development', 'Spring', 4,
+       'Spring Boot gives all the power of the Spring Framework without all of the complexities');
+INSERT INTO COURSES(NAME, CATEGORY, RATING, DESCRIPTION)
+VALUES('Getting Started with Spring Security DSL','Spring', 3,  'Learn Spring Security DSL in easy steps');
+INSERT INTO COURSES(NAME, CATEGORY, RATING, DESCRIPTION)
+VALUES('Scalable, Cloud Native Data Applications', 'Spring', 4,  'Manage Cloud based applications with Spring Boot');
+INSERT INTO COURSES(NAME, CATEGORY, RATING, DESCRIPTION)
+VALUES('Fully Reactive: Spring, Kotlin, and JavaFX Playing Together', 'Spring', 3,
+       'Unleash the power of Reactive Spring with Kotlin and Spring Boot');
+INSERT INTO COURSES(NAME, CATEGORY, RATING, DESCRIPTION)
+VALUES('Getting Started with Spring Cloud Kubernetes', 'Spring', 5, 'Master Spring Boot application deployment with Kubernetes');
