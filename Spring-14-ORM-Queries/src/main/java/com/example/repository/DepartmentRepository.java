@@ -30,4 +30,9 @@ public interface DepartmentRepository extends JpaRepository<Department, Long> {
 
     @Query("SELECT e FROM Employee e WHERE e.salary = :salary")
     List<Employee> getEmployeeSalary(@Param("salary") int salary);
+
+    List<Department> retrieveDepartmentByDivision(String division);
+
+    @Query(nativeQuery = true)
+    List<Department> retrieveDepartmentByDivisionContain(String pattern);
 }
