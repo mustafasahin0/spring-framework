@@ -1,19 +1,23 @@
 package com.example.repository;
 
+import com.example.entity.Cinema;
 import com.example.entity.MovieCinema;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public interface MovieCinemaRepository extends JpaRepository<MovieCinema, Long> {
     // ------------------- DERIVED QUERIES ------------------- //
 
     //Write a derived query to read movie cinema with id
+    MovieCinema getMovieCinemaByCinemaId(Long id);
 
     //Write a derived query to count all movie cinemas with a specific cinema id
-
+    List<MovieCinema> getMovieCinemasByCinemaId(Long id);
     //Write a derived query to count all movie cinemas with a specific movie id
-
+    List<List> findMovieCinemasByMovieEquals(Long id);
     //Write a derived query to list all movie cinemas with higher than a specific date
 
     //Write a derived query to find the top 3 expensive movies
