@@ -2,16 +2,12 @@ package com.example.controller;
 
 import com.example.dto.CourseDTO;
 import com.example.service.CourseService;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
-@RestController
+
+@RestController // @Controller + @ResponseBody
 @RequestMapping("/courses")
 public class CourseController {
 
@@ -23,8 +19,19 @@ public class CourseController {
 
     @GetMapping
     public List<CourseDTO> getAllCourses() {
-      List<CourseDTO> list = courseService.getCourses();
-      return list;
+        return courseService.getCourses();
+    }
+
+    @GetMapping("{id}")
+    public CourseDTO getCourseById(@PathVariable("id") Long courseId) {
+
+        return courseService.getCourseById(courseId);
+    }
+
+    @GetMapping("category/{name}")
+    public List<CourseDTO> getCourseByCategory(@PathVariable("name") String category) {
+
+        return courseService.getCoursesByCategory(category);
     }
 
 }
