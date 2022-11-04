@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @Service
 public class CourseServiceImpl implements CourseService {
 
-    private CourseRepository courseRepository;
+    private final CourseRepository courseRepository;
     private final MapperUtil mapperUtil;
 
     public CourseServiceImpl(CourseRepository courseRepository, MapperUtil mapperUtil) {
