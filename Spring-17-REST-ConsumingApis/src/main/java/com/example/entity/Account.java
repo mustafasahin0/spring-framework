@@ -1,6 +1,7 @@
 package com.example.entity;
 
 import com.example.enums.UserRole;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

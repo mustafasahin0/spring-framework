@@ -3,6 +3,7 @@ package com.example.entity;
 
 import com.example.enums.MovieState;
 import com.example.enums.MovieType;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
