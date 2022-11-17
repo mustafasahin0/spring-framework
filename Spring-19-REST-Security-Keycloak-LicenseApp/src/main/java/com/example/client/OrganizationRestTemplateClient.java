@@ -1,6 +1,7 @@
 package com.example.client;
 
 import com.example.model.Organization;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -11,6 +12,7 @@ public class OrganizationRestTemplateClient {
 
     private final RestTemplate restTemplate;
 
+    @Autowired
     public OrganizationRestTemplateClient(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
