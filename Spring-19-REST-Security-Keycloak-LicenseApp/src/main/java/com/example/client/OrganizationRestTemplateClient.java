@@ -12,7 +12,6 @@ public class OrganizationRestTemplateClient {
 
     private final RestTemplate restTemplate;
 
-    @Autowired
     public OrganizationRestTemplateClient(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }

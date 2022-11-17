@@ -5,9 +5,11 @@ import com.example.model.License;
 import com.example.model.Organization;
 import com.example.repository.LicenseRepository;
 import com.example.service.LicenseService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class LicenseServiceImpl implements LicenseService {
 
 
