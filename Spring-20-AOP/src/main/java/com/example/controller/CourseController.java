@@ -19,8 +19,7 @@ public class CourseController {
     @GetMapping
     public List<CourseDTO> getAllCourses() {
 
-        List<CourseDTO> list = courseService.getCourses();
-        return list;
+        return courseService.getCourses();
     }
 
     @GetMapping("/{id}")
@@ -28,7 +27,7 @@ public class CourseController {
         return courseService.getCourseById(courseId);
     }
 
-    @GetMapping("category/{name}")
+    @GetMapping("/category/{name}")
     public List<CourseDTO> getCourseByCategory(@PathVariable("name") String category) {
         return courseService.getCoursesByCategory(category);
     }
@@ -52,5 +51,6 @@ public class CourseController {
     public void deleteCourses() {
         courseService.deleteCourses();
     }
+
 
 }

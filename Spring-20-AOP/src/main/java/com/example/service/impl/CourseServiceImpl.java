@@ -5,7 +5,6 @@ import com.example.entity.Course;
 import com.example.repository.CourseRepository;
 import com.example.service.CourseService;
 import com.example.util.MapperUtil;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -62,14 +61,12 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public void deleteCourses() {
-        courseRepository.deleteAll();
-    }
-
-    @Override
     public void deleteCourseById(Long courseId) {
         courseRepository.deleteById(courseId);
     }
 
-
+    @Override
+    public void deleteCourses() {
+        courseRepository.deleteAll();
+    }
 }

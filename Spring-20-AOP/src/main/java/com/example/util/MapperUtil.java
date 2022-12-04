@@ -1,9 +1,11 @@
 package com.example.util;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Type;
 
+@Component
 public class MapperUtil {
 
     private final ModelMapper modelMapper;
@@ -12,7 +14,7 @@ public class MapperUtil {
         this.modelMapper = modelMapper;
     }
 
-    public <T> T convert(Object ojectToBeConverted, T convertedObject) {
-        return modelMapper.map(ojectToBeConverted, (Type) convertedObject.getClass());
+    public <T> T convert(Object objectToBeConverted, T convertedObject) {
+        return modelMapper.map(objectToBeConverted, (Type) convertedObject.getClass());
     }
 }
