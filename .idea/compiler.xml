@@ -27,6 +27,7 @@
         <module name="Spring-19-REST-Security-Keycloak-LicenseApp" />
         <module name="Spring-13-ORM-CinemaLab" />
         <module name="Spring-10-ORM-TableCreation" />
+        <module name="Spring-20-AOP" />
         <module name="Spring-05-Core-BeanScope" />
       </profile>
     </annotationProcessing>
@@ -48,6 +49,7 @@
       <module name="Spring-18-Rest-OpenApi3" options="-parameters" />
       <module name="Spring-19-REST-Security-Keycloak-LicenseApp" options="-parameters" />
       <module name="Spring-19-REST-Security-Keycloak-OrganizationsApp" options="-parameters" />
+      <module name="Spring-20-AOP" options="-parameters" />
     </option>
   </component>
 </project>
