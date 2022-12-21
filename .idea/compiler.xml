@@ -8,12 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Spring-18-Rest-OpenApi3" />
+        <module name="Spring-21-UnitTesting-JUnit5" />
         <module name="Spring-17-REST-ConsumingApis" />
         <module name="Spring-07-Spring-MVC-Controller" />
         <module name="Spring-00-Coupling" />
         <module name="Spring-02-Core-Wiring" />
         <module name="Spring-12-ORM-Mapping-OneToMany-ManyToMany" />
         <module name="Spring-08-Spring-MVC-Model" />
+        <module name="Spring-17-Rest-ConsumingApis" />
         <module name="Spring-04-Abstraction" />
         <module name="Spring-01-Core-IoC" />
         <module name="Spring-03-Core-DI" />
@@ -46,6 +48,7 @@
       <module name="Spring-15-REST" options="-parameters" />
       <module name="Spring-16-REST-Jackson" options="-parameters" />
       <module name="Spring-17-REST-ConsumingApis" options="-parameters" />
+      <module name="Spring-17-Rest-ConsumingApis" options="-parameters" />
       <module name="Spring-18-Rest-OpenApi3" options="-parameters" />
       <module name="Spring-19-REST-Security-Keycloak-LicenseApp" options="-parameters" />
       <module name="Spring-19-REST-Security-Keycloak-OrganizationsApp" options="-parameters" />
