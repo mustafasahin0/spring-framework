@@ -9,28 +9,29 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Spring-18-Rest-OpenApi3" />
         <module name="Spring-21-UnitTesting-JUnit5" />
-        <module name="Spring-17-REST-ConsumingApis" />
+        <module name="Spring-22-UnitTesting-Mockito" />
         <module name="Spring-07-Spring-MVC-Controller" />
-        <module name="Spring-00-Coupling" />
-        <module name="Spring-02-Core-Wiring" />
         <module name="Spring-12-ORM-Mapping-OneToMany-ManyToMany" />
         <module name="Spring-08-Spring-MVC-Model" />
-        <module name="Spring-17-Rest-ConsumingApis" />
-        <module name="Spring-04-Abstraction" />
-        <module name="Spring-01-Core-IoC" />
         <module name="Spring-03-Core-DI" />
         <module name="Spring-15-REST" />
         <module name="Spring-16-REST-Jackson" />
-        <module name="Spring-09-Spring-Thymeleaf" />
         <module name="Spring-06-SpringBoot-Demo" />
         <module name="Spring-14-ORM-Queries" />
         <module name="Spring-11-ORM-Mapping-OneToOne" />
-        <module name="Spring-19-REST-Security-Keycloak-OrganizationsApp" />
-        <module name="Spring-19-REST-Security-Keycloak-LicenseApp" />
         <module name="Spring-13-ORM-CinemaLab" />
-        <module name="Spring-10-ORM-TableCreation" />
         <module name="Spring-20-AOP" />
         <module name="Spring-05-Core-BeanScope" />
+        <module name="Spring-17-REST-ConsumingApis" />
+        <module name="Spring-00-Coupling" />
+        <module name="Spring-02-Core-Wiring" />
+        <module name="Spring-17-Rest-ConsumingApis" />
+        <module name="Spring-04-Abstraction" />
+        <module name="Spring-01-Core-IoC" />
+        <module name="Spring-09-Spring-Thymeleaf" />
+        <module name="Spring-19-REST-Security-Keycloak-OrganizationsApp" />
+        <module name="Spring-19-REST-Security-Keycloak-LicenseApp" />
+        <module name="Spring-10-ORM-TableCreation" />
       </profile>
     </annotationProcessing>
   </component>
@@ -53,6 +54,7 @@
       <module name="Spring-19-REST-Security-Keycloak-LicenseApp" options="-parameters" />
       <module name="Spring-19-REST-Security-Keycloak-OrganizationsApp" options="-parameters" />
       <module name="Spring-20-AOP" options="-parameters" />
+      <module name="Spring-22-UnitTesting-Mockito" options="-parameters" />
     </option>
   </component>
 </project>
