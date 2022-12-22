@@ -48,7 +48,6 @@
       <module name="Spring-14-ORM-Queries" options="-parameters" />
       <module name="Spring-15-REST" options="-parameters" />
       <module name="Spring-16-REST-Jackson" options="-parameters" />
-      <module name="Spring-17-REST-ConsumingApis" options="-parameters" />
       <module name="Spring-17-Rest-ConsumingApis" options="-parameters" />
       <module name="Spring-18-Rest-OpenApi3" options="-parameters" />
       <module name="Spring-19-REST-Security-Keycloak-LicenseApp" options="-parameters" />

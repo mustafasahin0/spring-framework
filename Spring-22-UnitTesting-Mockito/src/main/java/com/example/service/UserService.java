@@ -1,5 +1,6 @@
 package com.example.service;
 
+
 import com.example.dto.UserDTO;
 
 import java.util.List;
@@ -13,5 +14,9 @@ public interface UserService{
     void deleteByUserName(String username);
     void delete(String username);
     List<UserDTO> listAllByRole(String role);
+
+
+
+
 
 }

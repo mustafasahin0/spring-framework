@@ -1,10 +1,11 @@
 package com.example.entity;
 
 import com.example.enums.Gender;
-import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Where;
+
+import javax.persistence.*;
 
 @NoArgsConstructor
 @Data

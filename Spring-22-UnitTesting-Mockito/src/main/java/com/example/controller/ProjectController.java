@@ -64,6 +64,7 @@ public class ProjectController {
     }
 
 
+
     @GetMapping("/update/{projectcode}")
     public String editProject(@PathVariable("projectcode") String projectcode, Model model) {
 
@@ -96,7 +97,7 @@ public class ProjectController {
     @GetMapping("/manager/project-status")
     public String getProjectByManager(Model model) {
 
-        List<ProjectDTO> projects = projectService.listAllProjectDetails();
+       List<ProjectDTO> projects = projectService.listAllProjectDetails();
 
         model.addAttribute("projects", projects);
 
@@ -108,4 +109,5 @@ public class ProjectController {
         projectService.complete(projectCode);
         return "redirect:/project/manager/project-status";
     }
+
 }

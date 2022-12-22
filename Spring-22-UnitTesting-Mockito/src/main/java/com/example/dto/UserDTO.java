@@ -1,10 +1,11 @@
 package com.example.dto;
 
 import com.example.enums.Gender;
-import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
+import javax.validation.constraints.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -136,3 +137,5 @@ public class UserDTO {
     }
 
 }
+
+
