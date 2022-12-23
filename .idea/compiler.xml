@@ -33,8 +33,12 @@
         <module name="Spring-19-REST-Security-Keycloak-OrganizationsApp" />
         <module name="Spring-19-REST-Security-Keycloak-LicenseApp" />
         <module name="Spring-10-ORM-TableCreation" />
+        <module name="Spring-24-Docker" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Spring-24-docker" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -56,6 +60,8 @@
       <module name="Spring-20-AOP" options="-parameters" />
       <module name="Spring-22-UnitTesting-Mockito" options="-parameters" />
       <module name="Spring-23-UnitTesting-MockMvc" options="-parameters" />
+      <module name="Spring-24-Docker" options="-parameters" />
+      <module name="Spring-24-docker" options="-parameters" />
     </option>
   </component>
 </project>

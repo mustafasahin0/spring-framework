@@ -33,6 +33,7 @@
         <option value="$PROJECT_DIR$/Spring-21-UnitTesting-JUnit5/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-22-UnitTesting-Mockito/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-23-UnitTesting-MockMvc/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-24-Docker/pom.xml" />
       </list>
     </option>
   </component>
